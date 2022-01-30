@@ -11,7 +11,7 @@ using [gudhi](https://gudhi.inria.fr).
 
 | Voilà | JupyterLab |
 | :-----------------------: | :---------------------: |
-| [![voila-binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GUDHI/tda_financial_time_series/HEAD?urlpath=voila%2Frender%2Ftda_web_app.ipynb)| [![jupyterlab-binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GUDHI/tda_financial_time_series/HEAD?urlpath=lab%2Ftree%2Ftda_web_app.ipynb) |
+| [![voila-binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GUDHI/tda_financial_time_series_notebook/master?urlpath=voila%2Frender%2Ftda_web_app.ipynb)| [![jupyterlab-binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GUDHI/tda_financial_time_series_notebook/master?urlpath=lab%2Ftree%2Ftda_web_app.ipynb) |
 
 
 Binder or Voilà instance creation may take some time, but it requires no local installation.
