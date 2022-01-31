@@ -14,7 +14,7 @@ jobs:
       - name: Data construction and notebook update
         run: |
           conda init bash
-          bash
+          . ~/.bashrc
           conda env create -f environment.yml
           conda activate tda_financial_time_series
           python -m pip install yfinance
