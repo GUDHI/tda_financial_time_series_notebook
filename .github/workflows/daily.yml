@@ -25,5 +25,5 @@ jobs:
           git config --global user.name 'Continuous Integration'
           git config --global user.email 'gudhi-ci@inria.fr'
           git commit -am "[skip ci] Data construction and notebook update"
-          git push
+          git push origin HEAD:master --force
 
