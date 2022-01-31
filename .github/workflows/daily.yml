@@ -1,0 +1,27 @@
+name: Daily data construction and notebook update
+
+on: [push, pull_request]
+#  schedule:
+#    - cron: '0 2 * * *' # run at 2 AM UTC
+
+jobs:
+  build:
+    name: build pip wheel
+    runs-on: ubuntu-latest
+    container: condaforge/mambaforge:latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Data construction and notebook update
+        run: |
+          conda env create -f environment.yml
+          conda activate tda_financial_time_series
+          python -m pip install yfinance
+          python data_generation.py
+          jupyter nbconvert --to notebook --execute tda_web_app.ipynb
+      - name: Commit data and notebook
+        run: |
+          git config --global user.name 'Continuous Integration'
+          git config --global user.email 'gudhi-ci@inria.fr'
+          git commit -am "[skip ci] Data construction and notebook update"
+          git push
+
