@@ -1,8 +1,8 @@
 name: Daily data construction and notebook update
 
-on: [push, pull_request]
-#  schedule:
-#    - cron: '0 2 * * *' # run at 2 AM UTC
+on:
+  schedule:
+    - cron: '0 2 * * *' # run at 2 AM UTC
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
           conda activate tda_financial_time_series
           python -m pip install yfinance
           python data_generation.py
-          jupyter nbconvert --to notebook --execute tda_web_app.ipynb
+          jupyter nbconvert --to notebook --inplace --execute tda_web_app.ipynb
       - name: Commit data and notebook
         run: |
           git config --global user.name 'Continuous Integration'
