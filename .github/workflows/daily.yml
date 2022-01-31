@@ -24,6 +24,6 @@ jobs:
         run: |
           git config --global user.name 'Continuous Integration'
           git config --global user.email 'gudhi-ci@inria.fr'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git commit -am "[skip ci] Data construction and notebook update"
-          git push origin HEAD:master --force
-
+          git push
