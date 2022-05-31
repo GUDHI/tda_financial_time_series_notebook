@@ -2,7 +2,7 @@ name: tda_financial_time_series
 channels:
   - conda-forge
 dependencies:
-  - gudhi==3.5.0
+  - gudhi>=3.5.0
   - scikit-learn
   - plotly
   - numpy
