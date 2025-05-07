@@ -10,4 +10,5 @@ dependencies:
   - nodejs
   - ipywidgets
   - jupyterlab>=3.1
+  - anywidget
   - voila>=0.2.11
